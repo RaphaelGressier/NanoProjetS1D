@@ -1,5 +1,6 @@
 # !bin/bash/
-typeset -i aide=0 description=0 archivage=0 web=0 error=0 warning=0 Cible=0
+typeset -i aide=0 description=0 archivage=0 web=0 error=0 warning=0
+Cible=""
 #Detection des options
 while [ $# -ge 1 ]
 do

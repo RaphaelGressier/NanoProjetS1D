@@ -53,9 +53,8 @@ if [[ $warning -eq 1 ]]
 fi
 if [[ $archivage -eq 1 ]]
 	then
-		datejours=date +%d_%m_%y
 		if [[ $description -eq 1 ]]
-			then echo "Archivage des logs du $datejours en cours"
+			then echo "Archivage des logs du $(date +%d_%m_%y) en cours"
 		fi
 		cd ~/Projet/archive
 		tar zcvf $(date +%d_%m_%y).tar.gz $Cible

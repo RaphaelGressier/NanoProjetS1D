@@ -1,5 +1,5 @@
 # !bin/bash/
-
+typeset -i aide=0 description=0 archivage=0 web=0 error=0 warning=0 Cible=0
 #Detection des options
 while [ $# -ge 1 ]
 do
@@ -24,8 +24,8 @@ do
 		warning=1
 		;;
 	esac
-	if [[ -d $1 ]] || [[ -f $1 ]]
-		then Cible="$1" #Detecte si la cible est un fichier ou un dossier
+	if [[ -d $1 ]]
+		then Cible="$1" #Detecte si la cible est un dossier
 	fi
 shift
 done
@@ -34,11 +34,8 @@ done
 #Execution des commmandes
 if [[ $aide -eq 1 ]]
 	then
-	if [[ $description -eq 1 ]]
-			then echo "Affichage de l'aide en ligne"
-	fi
-	cat ~/S1D/ASR3/NanoProjet/Projet/bin/HELP.txt
-	exit 0
+		cat ~/S1D/ASR3/NanoProjet/Projet/bin/HELP.txt
+		exit 0
 fi
 if [[ $error -eq 1 ]]
 	then 

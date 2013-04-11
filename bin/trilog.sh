@@ -45,14 +45,14 @@ if [[ $error -eq 1 ]]
 		if [[ $description -eq 1 ]]
 			then echo "Affichage des erreurs du jours"
 		fi
-		grep -r ERROR $Cible
+		grep -r ERROR $Cible | more
 fi
 if [[ $warning -eq 1 ]]
 	then 
 		if [[ $description -eq 1 ]]
 			then echo "Affichage des alertes du jours"
 		fi
-		grep -r WARNING $Cible
+		grep -r WARNING $Cible | more
 fi
 if [[ $archivage -eq 1 ]]
 	then
